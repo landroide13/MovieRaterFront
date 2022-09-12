@@ -1,1 +1,37 @@
-<p>movie-form works!</p>
+
+<div class="card" style="width: 18rem;">
+
+    <div class="card-body">
+
+        <form action="" [formGroup]="movieForm" (submit)="saveForm()">
+
+            <div class="mb-3">
+                <label for="title" class="form-label">Movie Title</label>
+                <input type="text" class="form-control" formControlName="title" placeholder="">
+            </div>
+
+            <div class="mb-3"> 
+                <label for="description" class="form-label">Description</label>
+                <input type="text" class="form-control" formControlName="description" placeholder="">
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                <span *ngIf="this.id">Update</span>  
+                <span *ngIf="!this.id">Create</span>
+            </button>
+
+        </form>
+
+    </div>
+    
+</div>    
+
+
+
+
+
+
+
+
+
+

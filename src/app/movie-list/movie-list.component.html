@@ -1,1 +1,14 @@
-<p>movie-list works!</p>
+
+<h1>Movie-list</h1>
+
+<ul *ngFor="let movie of movies" >
+    <li>
+        <h3 (click)="movieClicked(movie)">{{ movie.title }}</h3>
+        <i class="bi bi-pen-fill" (click)="editMovie(movie)"></i>
+        <i class="bi bi-trash" (click)="deleteMovie(movie)"></i>
+    </li>
+</ul> 
+
+<button class="btn btn-lg btn-success" (click)="newMovie()">New Movie</button>
+
+

@@ -1,1 +1,33 @@
-<p>main works!</p>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <app-movie-list [movies]="movies" (selectMovie)="selectMovie($event)"
+            (editedMovie)="editedMovie($event)" (movie)="createNewMovie()" (deletedMovie)="deletedMovie($event)"></app-movie-list>
+        </div>
+        
+        <div class="col-md-4">
+            <app-movie-details [movie]="this.selectedMovie" (updateMovie)="selectMovie($event)"></app-movie-details>
+        </div>
+        
+        <div class="col-md-4" >
+            <app-movie-form *ngIf="editMovie" [movie]="this.editMovie"
+             (movieCreated)="movieCreated($event)" (movieUpdated)="movieUpdated($event)"></app-movie-form>
+        </div>
+    </div>
+   
+</div>
+<br>
+<div class="row">
+    <div class="container">
+        <button class="btn btn-primary btn-sm" (click)="logout()">LogOut</button>
+    </div>
+</div>
+
+
+
+
+
+
+

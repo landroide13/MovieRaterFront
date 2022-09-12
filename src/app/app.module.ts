@@ -3,20 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MovieDetailsComponent } from './movie-details/movie-details.component';
-import { MovieFormComponent } from './movie-form/movie-form.component';
-import { MovieListComponent } from './movie-list/movie-list.component';
+
+import { AuthModule } from './auth/auth.module';
+
+import { MainModule } from './main/main.module';
+
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    MovieDetailsComponent,
-    MovieFormComponent,
-    MovieListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AuthModule,
+    MainModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

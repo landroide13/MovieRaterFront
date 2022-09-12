@@ -1,1 +1,31 @@
-<p>auth works!</p>
+
+<div class="card" style="width: 18rem;">
+
+    <div class="card-body">
+
+        <form action="" [formGroup]="authForm" (submit)="saveForm()">
+
+            <div class="mb-3">
+                <label for="title" class="form-label">User Name</label>
+                <input type="username" class="form-control" formControlName="username">
+            </div>
+
+            <div class="mb-3"> 
+                <label for="description" class="form-label">Password</label>
+                <input type="password" class="form-control" formControlName="password">
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Log In 
+            </button>
+
+        </form>
+
+    </div>
+    
+</div>    
+
+
+
+
+
